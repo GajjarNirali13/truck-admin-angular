@@ -1,0 +1,41 @@
+<div>
+    <div class="note-list-header">
+        <div class="note-list-header-div">
+            <h2>Notes</h2>
+        </div>
+        <div class="note-list-header-btn-div">
+            <button uiSref="menu.manage-note" class="note-list-header-btn">Add New Note</button>
+        </div>
+    </div>
+    
+    
+    <mat-table #table [dataSource]="dataSource">
+
+        <!-- title Column -->
+        <ng-container matColumnDef="title">
+            <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+        </ng-container>
+
+        <!-- content Column -->
+        <ng-container matColumnDef="content">
+            <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+        </ng-container>
+
+        <!-- createdAt Column -->
+        <ng-container matColumnDef="createdAt">
+            <mat-header-cell *matHeaderCellDef> createdAt </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.createdAt | date:'medium'}} </mat-cell>
+        </ng-container>
+
+        <!-- updatedAt Column -->
+        <ng-container matColumnDef="updatedAt">
+            <mat-header-cell *matHeaderCellDef> updatedAt </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.updatedAt | date:'medium'}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+</div>

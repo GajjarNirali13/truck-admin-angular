@@ -1,0 +1,89 @@
+<div>
+    <div class="manage-employee-header">
+        <div class="manage-employee-header-div">
+            <h2>Manage Employee</h2>
+        </div>
+        <div class="manage-employee-header-btn-div">
+            <button uiSref="menu.employees-list" class="manage-employee-header-btn">
+                Back to List
+            </button>
+        </div>
+    </div>
+
+    <div style="margin-top:2%;">
+        <form class="employee-form" [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Name" formControlName="name">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['name'].errors && !employeeForm.controls['name'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['name'].errors.required" class="err-msg">
+                    Name is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Email" formControlName="email">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['email'].errors && !employeeForm.controls['email'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['email'].errors.required" class="err-msg">
+                    Email is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Username" formControlName="userName">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['userName'].errors && !employeeForm.controls['userName'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['userName'].errors.required" class="err-msg">
+                        Username is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Password" formControlName="passWord">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['passWord'].errors && !employeeForm.controls['passWord'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['passWord'].errors.required" class="err-msg">
+                    Password is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Phone Number" formControlName="phoneNumber">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['phoneNumber'].errors && !employeeForm.controls['phoneNumber'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['phoneNumber'].errors.required" class="err-msg">
+                    Phone Number is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="Address" formControlName="address">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['address'].errors && !employeeForm.controls['address'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['address'].errors.required" class="err-msg">
+                    Address is required.
+                </div>
+            </div>
+
+            <mat-form-field class="employee-full-width">
+                <input matInput placeholder="type" formControlName="type">                    
+            </mat-form-field>
+            <div *ngIf="employeeForm.controls['type'].errors && !employeeForm.controls['type'].pristine" class="error-msg">
+                <div [hidden]="!employeeForm.controls['type'].errors.required" class="err-msg">
+                    Type is required.
+                </div>
+            </div>
+
+            <div class="manage-employee-main-div">
+                <div class="manage-employee-sub-div-1">
+                    <button class="employee-submit-btn" mat-raised-button type="submit" [disabled]="!employeeForm.valid">Save</button>                   
+                </div>
+                <div class="manage-employee-sub-div-2">
+                    <button class="employee-submit-btn" mat-raised-button uiSref="menu.employees-list">Cancel</button>
+                </div>
+            </div>
+                
+        </form>
+    </div>    
+</div>

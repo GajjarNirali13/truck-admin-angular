@@ -1,0 +1,21 @@
+<div>
+    <div class="row location-row-div">
+        <div class="col-md-3">            
+            <mat-card class="location-mat-card">
+                <div class="location-mat-card-div">
+                    <button class="location-find-btn" mat-raised-button (click)="findMe()">Find Me</button>
+                    <hr style="margin-top:20%">
+                    <div style="text-align: center;">
+                        <h2>Current Location</h2>     
+                        {{currentLocation}}
+                    </div>
+                    <hr style="margin-bottom:20%"> 
+                    <button class="location-find-btn" mat-raised-button (click)="setLocation()">Set Location</button>                
+                </div>
+            </mat-card>            
+        </div>
+        <div class="col-md-9">
+            <div #gmap style="width: 100%;height: 100%;position: fixed !important;overflow: hidden;"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div style="width: 100%;">
+    <div class="menu-sidenav">
+        <div class="menu-sidenav-header">
+            <div class="menu-sidenav-subdiv" (click)="goToDashboard()">
+                Angular 2
+            </div>
+        </div>    
+        <ul class="menu-ul">
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.truck">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'truck'"></fa>
+                    </span>
+                    <span> Truck </span>                        
+                </a>
+            </li>
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.location">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'map-marker'"></fa>
+                    </span>
+                    <span> Location </span>                        
+                </a>
+            </li>
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.employees-list">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'address-card'"></fa>
+                    </span>
+                    <span> Employees </span>                        
+                </a>
+            </li>
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.note-list">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'sticky-note'"></fa>
+                    </span>
+                    <span> Notes </span>                        
+                </a>
+            </li>
+            
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.truck-menu">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'clipboard'"></fa>
+                    </span>
+                    <span> Menu </span>                        
+                </a>
+            </li>            
+            <li class="menu-ul-li">
+                <a class="menu-ul-li-a" uiSref="menu.about">
+                    <span class="menu-li-a-icon">
+                        <fa [name]="'info'"></fa>
+                    </span>
+                    <span> About </span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    
+    <!-- Load different component -->
+    <div class="menu-main-body"> 
+            <div class="menu-body-header">
+                
+            </div>       
+            <div class="menu-body">
+                <ui-view></ui-view>
+            </div>
+    </div>   
+</div>
+
+

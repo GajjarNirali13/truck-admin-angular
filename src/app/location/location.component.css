@@ -1,0 +1,27 @@
+.location-find-btn {
+    width:100%;
+    background-color:#008b8b;
+    color: #fff;
+}
+
+.location-row-div {
+    min-height: 80vh;
+}
+
+.location-mat-card {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.location-mat-card-div {
+    padding: 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}

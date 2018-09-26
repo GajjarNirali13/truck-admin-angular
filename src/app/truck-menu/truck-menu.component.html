@@ -1,0 +1,28 @@
+<div class="truck-menu-container">    
+    <form class="truck-menu-form" #formRef="ngForm">
+        <button (click)="submit()">Submit</button>
+        <div *ngFor="let item of nodes; let i = index;let last = last">
+            <mat-form-field class="truck-menu-full-width">
+                <input matInput type="text" placeholder="Category" [(ngModel)]="item.value" 
+                    name="parent-{{i}}" #name="ngModel"/> 
+            </mat-form-field>
+            <button class="truck-menu-submit-btn" (click)='addParent(i)' *ngIf="last">Add</button>
+            <button class="truck-menu-submit-btn" (click)='delParent(i)' *ngIf="last">DEL</button>
+            <div *ngFor="let child of item.children; let j = index; let lastChild = last;" style="padding-left:4%">
+                <div>
+                    <mat-form-field class="truck-menu-item">
+                        <input matInput type="text" placeholder="Item" [(ngModel)]="child.value" 
+                            name="child-{{i}}-item-{{j}}" #name="ngModel"/>
+                    </mat-form-field>
+                    <mat-form-field class="truck-menu-price">
+                        <input matInput type="number" placeholder="Price" [(ngModel)]="child.price" 
+                            name="child-{{i}}-price-{{j}}" #name="ngModel"/>
+                    </mat-form-field>
+                    <button class="truck-menu-submit-btn" (click)='addChild(i, item, j)' *ngIf="lastChild">Add</button>
+                    <button class="truck-menu-submit-btn" (click)='delChild(i, j)' *ngIf="lastChild">DEL</button>
+                </div>
+            </div>
+        </div>
+    </form>      
+</div>
+    

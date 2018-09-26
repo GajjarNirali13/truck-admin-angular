@@ -1,0 +1,96 @@
+.menu-sidenav {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #008b8b;
+    overflow-x: hidden;
+    padding-top: 60px;
+    margin: 0;
+    padding: 0; 
+    width:10%;
+    float: left;
+    z-index: 1000;
+}
+
+.menu-sidenav-header {
+    height: 65px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    display: table;
+    width:100%;
+}
+
+.menu-sidenav-subdiv {
+    display: table-cell; 
+    vertical-align:middle
+}
+
+.menu-main-body {
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #E8E8E8;
+    overflow-x: hidden;
+    padding-top: 60px;
+    margin: 0;
+    padding: 0; 
+    width:90%;
+    float: right;
+}
+
+
+.menu-body-header {
+    background-color: #008b8b;
+    display: block;
+    height: 65px;
+    margin-bottom: 0;
+    padding: 0;
+    position: fixed;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    width: 100%;
+    z-index: 800;
+}
+
+.menu-body {
+    padding: 85px 20px 20px;
+    min-height: calc(100vh - 61px);
+}
+
+.menu-ul {
+    list-style-type: none;
+    padding:0;
+}
+
+.menu-ul-li {
+    margin-top: 30px;
+}
+
+.menu-ul-li-a {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 15px;
+    position: relative;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.menu-li-a-icon {
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 20px;
+    height: 35px;
+    left: 0;
+    line-height: 35px;
+    position: relative;
+    text-align: center;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    width: 35px;
+    float: left;
+}

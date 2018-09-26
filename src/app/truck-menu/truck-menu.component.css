@@ -1,0 +1,38 @@
+.truck-menu-header {
+    text-align:center;
+}
+.truck-menu-form {
+    max-width: 100%;
+}
+
+.truck-menu-full-width {
+    width: 80%;
+}
+
+.truck-menu-container {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 2%;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+}
+
+.truck-menu-submit-btn {
+    background-color:#008b8b;
+    color: #fff;
+    border: 0;
+    width: 5%;
+    margin-left: 1%;
+}
+
+.truck-menu-item{
+    width: 40%;
+}
+
+.truck-menu-price {
+    width:39%;
+}

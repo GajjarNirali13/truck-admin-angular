@@ -1,0 +1,17 @@
+.employee-list-header {
+    width:100%;
+    display:inline-block;
+}
+.employee-list-header-btn {
+    float: right;
+}
+
+.employee-list-header-btn-div{
+    width:50%;
+    float:right;
+}
+
+.employee-list-header-div {
+    width:50%;
+    float:left;
+}

@@ -1,0 +1,17 @@
+.note-list-header {
+    width:100%;
+    display:inline-block;
+}
+.note-list-header-btn {
+    float: right;
+}
+
+.note-list-header-btn-div{
+    width:50%;
+    float:right;
+}
+
+.note-list-header-div {
+    width:50%;
+    float:left;
+}
